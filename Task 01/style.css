@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to right, #0066ff, #00ccff);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    padding: 15px 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #ffcc00;
+}
+.navbar .logo:hover{
+    opacity: 0.8;
+}
+
+.section {
+    padding: 100px 20px;
+    
+}
+
+/* styling for home section  */
+#home{
+    background-color:aliceblue;  
+}
+#home .container{
+    background-color:#0066ff;
+    color:aliceblue;
+    text-align: center;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    padding: 30px;
+}
+#home .container h1{
+    font-size: 32px;
+}
+#home .container p{
+    font-size: 15px;
+    opacity: 0.7;
+}
+#home .container button{
+    border: 0;
+    padding: 3px 9px;
+    border-radius: 5px;
+    background-color:#004bba;
+    color: inherit;
+    transition: 0.3s;
+}
+#home .container button:hover{
+    background-color:#005ae1;
+    scale: 1.03;
+}
+
+#about { background: #e2e2e2; }
+#services { background: #d0d0d0; }
+#contact { background: #bfbfbf; }
