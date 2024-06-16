@@ -12,3 +12,15 @@ function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
 }
+
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+
+
+function closeMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('active');
+}

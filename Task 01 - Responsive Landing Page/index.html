@@ -11,13 +11,17 @@
         <div class="logo" style="width: 100px; padding-block: 3px; cursor: pointer;">
             <img src="img/md.svg" alt="" height="46px">
         </div>
-        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="menu">
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#about">About</a></li>
-                <li class="nav-item"><a href="#services">Services</a></li>
-                <li class="nav-item"><a href="#contact-us">Contact</a></li>
+                <li class="nav-item"><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li class="nav-item"><a href="#about" onclick="closeMenu()">About</a></li>
+                <li class="nav-item"><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li class="nav-item"><a href="#contact-us" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -25,7 +29,7 @@
     <section id="home" class="section">
         <div class="container"> 
             <h1>Responsive Landing Page</h1>
-            <p>This page created only for learning pupose.</p>
+            <p>This page created only for learning purpose, developed by <Span style="font-weight: 700;">@Maruti Dalvi</Span>.</p>
             <button onclick="scrollToSection('about')">Explore More 👇</button>
         </div>
       
@@ -43,7 +47,7 @@
                     <p>
                         Join us in transforming the educational landscape with engaging and effective learning experiences. Together, we can achieve your goals and foster a brighter future for everyone.
                     </p>
-                    <p>Follo me on instagram <span style="color:#065ad9; display: inline-block;">@maruti-dalvi</span></p>
+                    <p>Follow me on Instagram <span style="color:#065ad9; display: inline-block;">@maruti-dalvi</span></p>
                 </div>
             </div>
             <div class="about-image">
@@ -225,7 +229,7 @@
             </div>
         </div>
     </footer>
-
+  
     <script src="script.js"></script>
 </body>
 </html>

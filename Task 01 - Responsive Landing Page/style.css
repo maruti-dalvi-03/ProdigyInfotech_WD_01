@@ -5,12 +5,40 @@ body, html {
 }
 
 .navbar {
-    position: fixed;
+    position: fixed;top: 0;
     width: 100%;
     background: linear-gradient(to right, #0066ff, #00ccff);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
     z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 100px;
+    padding-block: 3px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    display: flex;
 }
 
 .nav-menu {
@@ -36,8 +64,39 @@ body, html {
 .nav-item a:hover {
     color: #0051a7;
 }
-.navbar .logo:hover{
+
+.navbar .logo:hover {
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
 }
 
 .section {
@@ -48,6 +107,11 @@ body, html {
 /* styling for home section  */
 #home{
     background-color:white; 
+    margin-top: 80px;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #home .container{
     /* background-color:#0066ff; */
@@ -57,6 +121,7 @@ body, html {
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     padding: 30px;
+    width: 100%;
 }
 #home .container h1{
     font-size: 32px;
@@ -65,11 +130,12 @@ body, html {
 #home .container p{
     font-size: 15px;
     opacity: 0.7;
+    margin-bottom: 24px;
 }
 #home .container button{
     font-size: 16px;
     border: 0;
-    padding: 5px 9px;
+    padding: 5px 12px;
     border-radius: 5px;
     background:radial-gradient(#3d88f9, #1e73f2);
     color: inherit;
@@ -80,9 +146,17 @@ body, html {
     background-color:#005ae1;
     scale: 1.07;
 }
-@media (min-width:502px) and (max-width:780px) {
+@media (min-width:781px) and (max-width:964px){
     #home{
-        padding: 20px;
+        padding:auto 30px;
+    }
+}
+@media(max-width:780px) {
+    /* #home{
+        margin-top: 80px;
+    } */
+    #home .container h1{
+        font-size: 24px;
     }
 }
 
@@ -90,6 +164,7 @@ body, html {
 #about{
      background: #f3f4fe;
      padding-inline: 100px;
+     padding-top: 156px;
 }
 #about .container{
     background-color: white;
@@ -137,34 +212,39 @@ body, html {
     height: auto;
     border-radius: 8px;
 }
-@media (max-width:500px) {
-    #about{
-        padding: 20px !important;
-    } 
-    #about .container {
-        margin: 18px;
-    }
-    #about .container .about-content-wrap{
-        padding: 14px;
-    }
+@media (max-width:1200px){
     #about .container .about-image{
         display: none;
     }
 }
-
-
-
-
-#services { 
-    background: white; 
+@media (max-width:550px) {
+    #about{
+        padding: 76px 20px 30px 20px !important;
+    } 
+    #about .container {
+        margin: 18px;
+    }
+    #about .container .about-content h1{
+       font-size: 24px;
+       line-height: 28px;
+    }
+    #about .container .about-content-wrap{
+        padding: 14px;
+    }
+    
 }
-#contact { 
-    background: white; 
-}
+
+
+
+
+
 
 
 /* styling for services page  */
-
+#services { 
+    background: white; 
+    padding-top: 80px;
+}
 #services .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -263,7 +343,7 @@ body, html {
 
 /* styling for contact section  */
 #contact-us {
-    padding: 50px 20px;
+    padding: 80px 20px;
 }
 #contact-us .container {
     max-width: 1200px;
@@ -290,7 +370,6 @@ body, html {
 }
 
 #contact-us .info-box {
-    min-width: 360px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -309,6 +388,10 @@ body, html {
 #contact-us .info-box p {
     font-size: 16px;
     color: #4a5568;
+}
+#contact-us .info-box img{
+    transition: all 0.5s ease-in-out;
+    z-index: 999;
 }
 #contact-us .info-box img:hover{
     transform: scale(7);
@@ -368,10 +451,17 @@ body, html {
 #contact-us button:hover{
     background-color: #3494fb;
 }
-@media (min-width:780px) and (max-width:1024px) {
+@media(max-width:1024px) {
     #contact-us .contact-content{
         flex-direction: column;
         width: 100%;
+    }
+    #contact-us .info-box:hover {
+        transform: translateX(-5px);
+    }
+    #contact-us .info-box img:hover {
+        transform: scale(2);
+        padding: 0;margin: 0;
     }
 }
 /* Styling for the footer */
@@ -384,7 +474,7 @@ body, html {
 
 .footer .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -400,7 +490,8 @@ body, html {
 .footer .footer-menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 12px;
     margin: 0;
     padding: 0;
 }
@@ -409,11 +500,14 @@ body, html {
     text-decoration: none;
     color: white;
 }
-
+.footer .footer-social{
+    display: flex;
+    flex-direction: column;
+}
 .footer .footer-social a {
     text-decoration: none;
     color: white;
-    margin: 0 10px;
+    margin-bottom:  12px;
 }
 
 .footer-bottom {
@@ -430,10 +524,26 @@ body, html {
 .footer a:hover{
     color: #3d88f9;
 }
+@media (max-width:701px) {
+    .footer .footer-content{
+        flex-direction: column;
+    }
+    .footer .footer-menu{
+        width: 100%;
+        border-block:2px solid #678dda;
+        padding-block: 15px;
+    }
+    .footer .footer-social{
+        width:100%;
+        border-bottom: 2px solid #678dda;
+        margin-top: 15px;
+    }
+}
 
 
-@media (min-width:501px) and (max-width:780px) {
+
+@media (max-width:780px) {
     .section{
-        padding: 20px;
+        padding: 18px;
     }
 }
