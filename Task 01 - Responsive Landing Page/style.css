@@ -1,0 +1,439 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to right, #0066ff, #00ccff);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    z-index: 99;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    padding: 15px 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.4s ease;
+}
+
+.nav-item a:hover {
+    color: #0051a7;
+}
+.navbar .logo:hover{
+    opacity: 0.8;
+}
+
+.section {
+    padding: 100px 162px;
+    
+}
+
+/* styling for home section  */
+#home{
+    background-color:white; 
+}
+#home .container{
+    /* background-color:#0066ff; */
+    background: linear-gradient(to left, #0066ff, #00ccff);
+    color:aliceblue;
+    text-align: center;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    padding: 30px;
+}
+#home .container h1{
+    font-size: 32px;
+    text-transform: uppercase;
+}
+#home .container p{
+    font-size: 15px;
+    opacity: 0.7;
+}
+#home .container button{
+    font-size: 16px;
+    border: 0;
+    padding: 5px 9px;
+    border-radius: 5px;
+    background:radial-gradient(#3d88f9, #1e73f2);
+    color: inherit;
+    font-weight: 600;
+    transition: 0.3s;
+}
+#home .container button:hover{
+    background-color:#005ae1;
+    scale: 1.07;
+}
+@media (min-width:502px) and (max-width:780px) {
+    #home{
+        padding: 20px;
+    }
+}
+
+/* styling for about section  */
+#about{
+     background: #f3f4fe;
+     padding-inline: 100px;
+}
+#about .container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+#about .container:hover{
+    transform: scaleX(1.05);
+}
+#about .container .about-content-wrap{
+    padding: 60px;
+    flex: 1;
+    margin-right: 15px;
+}
+#about .container .about-content .about-title{
+    background-color: #065ad9;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 20px;
+    display: inline-block;
+}
+#about .container .about-content h1{
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+#about .container .about-content p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(115, 105, 105, 0.809);
+}
+#about .container .about-image {
+    display: flex;
+    align-items: start;
+    flex: 1;
+    margin: 0;padding: 0;
+}
+#about .container .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+@media (max-width:500px) {
+    #about{
+        padding: 20px !important;
+    } 
+    #about .container {
+        margin: 18px;
+    }
+    #about .container .about-content-wrap{
+        padding: 14px;
+    }
+    #about .container .about-image{
+        display: none;
+    }
+}
+
+
+
+
+#services { 
+    background: white; 
+}
+#contact { 
+    background: white; 
+}
+
+
+/* styling for services page  */
+
+#services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#services .services-header h1 {
+    color: #007bff;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+#services .services-header p {
+    font-size: 16px;
+    color: #4a5568;
+    margin-bottom: 50px;
+}
+#services .services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+#services .services-card {
+    width: 360px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s;
+}
+#services .services-card:hover{
+    transform:scaleY(1.05);
+}
+#services .services-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+#services .services-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+#services .services-card ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #4a5568;
+    opacity: 0.6;
+}
+#services .services-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+#services .services-card.popular {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    scale: 1.05;
+}
+#services .services-card.popular span {
+    background-color: white;
+    color: #007bff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#services .services-card.popular h3 {
+    color: white;
+}
+#services .services-card.popular ul li {
+    color: white;
+}
+#services .services-card.popular button {
+    background-color: white;
+    color: #007bff;
+}
+
+/* resposiveness for mobile devices  */
+@media (max-width:500px) {
+    #services .services-cards{
+        flex-wrap: wrap;
+    }
+}
+
+/* styling for contact section  */
+#contact-us {
+    padding: 50px 20px;
+}
+#contact-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#contact-us .contact-header h1 {
+    color: #007bff;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+#contact-us .contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+}
+#contact-us .contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact-us .info-box {
+    min-width: 360px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.4s;
+}
+#contact-us .info-box:hover{
+    transform: scaleX(1.05);
+}
+#contact-us .info-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+#contact-us .info-box p {
+    font-size: 16px;
+    color: #4a5568;
+}
+#contact-us .info-box img:hover{
+    transform: scale(7);
+}
+#contact-us .contact-form {
+    flex: 1.5;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: all 0.4s;
+}
+#contact-us .contact-form:hover{
+    transform: translateX(-10px);
+}
+#contact-us .contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+#contact-us .form-group {
+    margin-bottom: 15px;
+}
+
+#contact-us .form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #4a5568;
+}
+
+#contact-us .form-group input,
+#contact-us .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#contact-us .form-group textarea {
+    resize: none;
+}
+
+#contact-us button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+#contact-us button:hover{
+    background-color: #3494fb;
+}
+@media (min-width:780px) and (max-width:1024px) {
+    #contact-us .contact-content{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+/* Styling for the footer */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer .footer-logo img {
+    max-width: 150px;
+    cursor: pointer;
+}
+
+.footer .footer-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .footer-social a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    border-bottom: 1px solid #2e2f31;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer a:hover{
+    color: #3d88f9;
+}
+
+
+@media (min-width:501px) and (max-width:780px) {
+    .section{
+        padding: 20px;
+    }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" style="display: flex; justify-content: space-around;">
+        <div class="logo" style="width: 100px; padding-block: 3px; cursor: pointer;">
+            <img src="img/md.svg" alt="" height="46px">
+        </div>
+        
+        <div class="menu">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="#contact-us">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="section">
+        <div class="container"> 
+            <h1>Responsive Landing Page</h1>
+            <p>This page created only for learning pupose.</p>
+            <button onclick="scrollToSection('about')">Explore More 👇</button>
+        </div>
+      
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content-wrap">
+                <div class="about-content">
+                    <span class="about-title">About Us</span>
+                    <h1>Empowering Lifelong Learning</h1>
+                    <p>
+                        Our mission is to provide accessible and innovative learning solutions that help individuals of all backgrounds reach their highest potential. Whether you’re a student aiming to improve your grades, a professional looking to advance your career, or an organization seeking to elevate your employee training programs, we have the resources and expertise to support your journey.
+                    </p>
+                    <p>
+                        Join us in transforming the educational landscape with engaging and effective learning experiences. Together, we can achieve your goals and foster a brighter future for everyone.
+                    </p>
+                    <p>Follo me on instagram <span style="color:#065ad9; display: inline-block;">@maruti-dalvi</span></p>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="img/about-image.svg" alt="about-image">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="services-header">
+                <h1>Our services</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quod corrupti quibusdam neque ipsa distinctio tempora incidunt iste animi! Ratione nesciunt architecto magni suscipit expedita quos sit repellendus odit dolorum?
+                </p>
+            </div>
+            <div class="services-cards">
+                <div class="services-card">
+                    <h3>Software Development services</h3>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Life Cycle</li>
+                        <li>CLI Apps</li>
+                        <li>GUI Apps</li>
+                        <li>Web Scraping</li>
+                    </ul>
+                    <button>Know more</button>
+                </div>
+                <div class="services-card popular">
+                    <span>Popular</span>
+                    <h3>Web Development services</h3>
+                    <ul>
+                        <li>Overview</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>Javascript</li>
+                        <li>Responsive Website</li>
+                        <li>Web Applications</li>
+                    </ul>
+                    <button>Know more</button>
+                </div>
+                <div class="services-card">
+                    <h3>Android Development services</h3>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Kotlin/Flutter/React Native</li>
+                        <li>Simple Apps</li>
+                        <li>Advanced Apps</li>
+                        <li>Cloud Apps</li>
+                    </ul>
+                    <button>Know more</button>
+                </div>
+            </div>
+
+            <div class="services-cards">
+                <div class="services-card">
+                    <h3>Software Development services</h3>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Life Cycle</li>
+                        <li>CLI Apps</li>
+                        <li>GUI Apps</li>
+                        <li>Web Scraping</li>
+                    </ul>
+                    <button>Know more</button>
+                </div>
+                <div class="services-card popular">
+                    <span>Popular</span>
+                    <h3>Web Development services</h3>
+                    <ul>
+                        <li>Overview</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>Javascript</li>
+                        <li>Responsive Website</li>
+                        <li>Web Applications</li>
+                    </ul>
+                    <button>Know more</button>
+                </div>
+                <div class="services-card">
+                    <h3>Android Development services</h3>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Kotlin/Flutter/React Native</li>
+                        <li>Simple Apps</li>
+                        <li>Advanced Apps</li>
+                        <li>Cloud Apps</li>
+                    </ul>
+                    <button>Know more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="contact-us" class="section">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <div class="contact-heading">We're excited to hear about your project! Please fill out the form below and we'll get back to you as soon as possible.</div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h4>Our Location</h4>
+                        <p>Mumbai - 401105, Maharashtra, India</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>How Can We Help?</h4>
+                        <p>dalvimaruti2816@gmail.com</p>
+                    </div>
+                    <div class="info-box" style="display: flex; justify-content: space-between;">
+                        <div class="left">
+                            <h4>You can Follow me on Instagram</h4>
+                            <p>@maruti-dalvi</p>
+                        </div>
+                        <div class="right"> 
+                                <img src="img/insta-invite" alt="" width="75px">
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name*</label>
+                            <input type="text" id="name" placeholder="John Don" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" placeholder="example@yourmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone*</label>
+                            <input type="tel" id="phone" placeholder="XXXXXXXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message*</label>
+                            <textarea id="message" rows="4" placeholder="Type your message here" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/md.svg" alt="Logo" height="50px"></img>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact-us">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;marutideveloper, 2024. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
